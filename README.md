@@ -5,11 +5,12 @@ Session Notes, java class folder contains java class files and selenium class fo
 
 Please complete below github assignment aug 30, 2021
 
-Task 10 – Aug 30, 2021
- (Add Thread.Sleep(5000) before findelement if any error) 
-1.	Navigate to https://github.com/
-2.	Click on Sign in
-3.	Enter username as hello
-4.	Enter password as 89hello
-5.	Click Sign in 
+Task 11 – Aug 31, 2021 (Open in incognito window to inspect) 
+1.	Navigate onto https://www.medibuddy.in/
+2.	Click on Not Now button
+3.	Click on Sign up
+4.	Click on I have an Insurance/Corporate Account
+5.	Enter some username and password 
+6.	Click on sign up
+
 
