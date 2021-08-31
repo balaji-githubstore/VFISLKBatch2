@@ -2,8 +2,7 @@
 
 Session Notes, java class folder contains java class files and selenium class folder contains selenium code added,
 
-
-Please complete below github assignment aug 30, 2021
+xpath notes updates
 
 Task 11 – Aug 31, 2021 (Open in incognito window to inspect) 
 1.	Navigate onto https://www.medibuddy.in/
