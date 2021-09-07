@@ -13,9 +13,9 @@ Following - Preceding
 
 //select[contains(@id,'CompanyCount')]/following::div[@class='checkbox-ui']
 
+//span[text()='Last Name']/following::input
 
-
-
+//*[text()='Last Name']/following::input
 
 
 
