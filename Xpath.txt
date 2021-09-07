@@ -5,8 +5,16 @@ Xpath
 //tagname[@attribute='']
 //tagname[text()='']
 
+//tagname[contains(@attribute,'')]
+//tagname[contains(text(),'')]
 
-//div[text()='Flow Board']
+
+Following - Preceding 
+
+//select[contains(@id,'CompanyCount')]/following::div[@class='checkbox-ui']
+
+
+
 
 
 
@@ -16,3 +24,12 @@ Example:
 //button[@type='submit']
 //input[@type='text']
 //div[@class='menuLabel']
+//div[text()='Flow Board']
+
+//div[text()='I have an Insurance/Corporate Account']
+//div[contains(text(),'incorrect')]
+
+
+//input[contains(@id,'UserFirstName')]
+
+//frame[@name='login_page']
