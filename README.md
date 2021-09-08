@@ -2,6 +2,8 @@
 
 Session Notes, java class folder contains java class files and selenium class folder contains selenium code added,
 
+ChromeDriver - 93.0 - https://chromedriver.storage.googleapis.com/93.0.4577.15/chromedriver_win32.zip
+
 
 Task 14 – Sep 7, 2021
 1.	Navigate onto http://demo.openemr.io/b/openemr/interface/login/login.php?site=default
