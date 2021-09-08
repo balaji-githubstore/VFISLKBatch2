@@ -5,6 +5,7 @@ Xpath
 //tagname[@attribute='']
 //tagname[text()='']
 
+Contains
 //tagname[contains(@attribute,'')]
 //tagname[contains(text(),'')]
 
@@ -17,7 +18,8 @@ Following - Preceding
 
 //*[text()='Last Name']/following::input
 
-
+Grouping of xpath
+(//div[@class='cb41error'])[2]
 
 
 Example:
