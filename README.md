@@ -7,7 +7,7 @@ Session Notes, java class folder contains java class files and selenium class fo
 
 ChromeDriver - 93.0 - https://chromedriver.storage.googleapis.com/93.0.4577.15/chromedriver_win32.zip
 
-Task 17 – Sep98, 2021
+Task 17 – Sep9, 2021
 
 1.	Navigate onto https://www.automationworld.com/
 2.	Close if any popup
