@@ -12,6 +12,25 @@ Contains
 
 Following - Preceding 
 
+//tagname[@attribute='']/following::tagname
+
+//span[contains(text(),'receive')]/following::label
+
+
+//span[contains(text(),'receive')]/following::label[text()='No']
+
+
+And - OR
+//tagname[@attribute='' and @attribute='']
+
+//input[@id='existcust' and @value='No']
+
+
+--------------------------------
+//b[contains(text(),'phpMyAdmin')]
+
+
+
 //select[contains(@id,'CompanyCount')]/following::div[@class='checkbox-ui']
 
 //span[text()='Last Name']/following::input
@@ -35,3 +54,20 @@ Example:
 //input[contains(@id,'UserFirstName')]
 
 //frame[@name='login_page']
+
+//div[text()='Messages']
+
+
+//a[contains(@aria-label,'sso-btn')]
+//a[@aria-label='sso-btn']
+
+
+
+
+//a[contains(@href,'my-account')]
+
+//iframe[contains(@src,'messages.php')]
+
+//iframe[contains(@src,'/sign-in')]
+
+
