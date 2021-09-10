@@ -1,11 +1,20 @@
 # VFISLKBatch2
 
+
+https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm
+
+
+
 ArrayList<String> windows=new ArrayList<String>(driver.getWindowHandles());
 
 
 Session Notes, java class folder contains java class files and selenium class folder contains selenium code added,
 
 ChromeDriver - 93.0 - https://chromedriver.storage.googleapis.com/93.0.4577.15/chromedriver_win32.zip
+  
+  
+  
+  
 
 Task 17 – Sep9, 2021
 
