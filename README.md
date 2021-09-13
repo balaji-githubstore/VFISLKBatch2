@@ -1,5 +1,17 @@
 # VFISLKBatch2
-
+    ChromeOptions opt=new ChromeOptions();
+		opt.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
+		
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Components\\chromedriver.exe");
+		
+		WebDriver driver=new ChromeDriver(opt);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		driver.get("https://nasscom.in/");
+    
+    
 
 https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm
 
