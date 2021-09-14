@@ -1,4 +1,10 @@
 # VFISLKBatch2
+    
+    Testng setup
+    https://github.com/cbeust/testng-eclipse
+    
+    
+    
     ChromeOptions opt=new ChromeOptions();
 		opt.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
 		
