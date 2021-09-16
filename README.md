@@ -10,7 +10,7 @@ Session Notes, java class folder contains java class files and selenium class fo
 
 
 
-Task 20 – Sep 15, 2021
+Task 20 – Sep 16, 2021
 1.	Create a new java project
 2.	Create a package - com.voya.orangetest
 3.	Create a class - LoginTest
