@@ -5,7 +5,7 @@
     <classes>
       <class name="com.voya.test.LoginTest">
         <methods>
-          <include name="validCredentialTest"/>
+          <include name="invalidCredentialTest"/>
         </methods>
       </class> <!-- com.voya.test.LoginTest -->
     </classes>

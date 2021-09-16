@@ -7,26 +7,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class LoginTest {
+	private WebDriver driver;
 	
-	@Test
-	public void invalidCredentialTest()
-	{
-		//set property and launch the browser
-		//maximize and implicit wait 
-		//navigate url
-		//enter username as jack
-		//enter password as jack123
-		//select language English (Indian)
-		//click on login
-		
-		//get actual value and compare with expected value = Invalid username or password
-	}
-	
-	@Test
-	public void validCredentialTest()
+	@BeforeMethod
+	public void setUp()
 	{
 		System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
@@ -34,19 +23,40 @@ public class LoginTest {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get("https://demo.openemr.io/b/openemr");
-		
+	}
+	
+	@AfterMethod
+	public void tearDown()
+	{
+		driver.quit();
+	}
+	
+	
+	@Test(priority = 2)
+	public void invalidCredentialTest()
+	{
 		driver.findElement(By.id("authUser")).sendKeys("admin123");
-		driver.findElement(By.id("clearPass")).sendKeys("pass");
-		
+		driver.findElement(By.id("clearPass")).sendKeys("pass");	
 		Select selectLanguage=new Select(driver.findElement(By.name("languageChoice")));
 		selectLanguage.selectByVisibleText("English (Indian)");
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		
+		String actualValue= driver.findElement(By.xpath("//div[contains(text(),'Invalid')]")).getText();
+		Assert.assertEquals(actualValue.trim(), "Invalid username or password");
+	}
+	
+	@Test(priority = 1)
+	public void validCredentialTest()
+	{	
+		driver.findElement(By.id("authUser")).sendKeys("admin");
+		driver.findElement(By.id("clearPass")).sendKeys("pass");		
+		Select selectLanguage=new Select(driver.findElement(By.name("languageChoice")));
+		selectLanguage.selectByVisibleText("English (Indian)");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		
 		String actualValue= driver.getTitle();
-		System.out.println(actualValue);
-		
-		Assert.assertEquals(actualValue, "OpenEMR");
+		System.out.println(actualValue);		
+		Assert.assertEquals(actualValue,"OpenEMR");
 	}
-	
 }
+
