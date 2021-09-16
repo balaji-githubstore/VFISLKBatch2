@@ -1,7 +1,7 @@
 # VFISLKBatch2
     
     Testng setup
-   https://1drv.ms/u/s!AmN6x7VqmTjwggaacC-GOhh5fVn3?e=VC9359
+ https://github.com/cbeust/testng-eclipse
 
 
 Session Notes, java class folder contains java class files and selenium class folder contains selenium code added,
