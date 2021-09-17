@@ -5,9 +5,12 @@
     <classes>
       <class name="com.voya.test.LoginTest">
         <methods>
+          <include name="checkLoginPageTitleTest"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="checkLoginPageTitle"/>
+          <include name="checkApplicationDescTest"/>
+          <include name="invalidCredentialTest"/>
+          <include name="validCredentialTest"/>
         </methods>
       </class> <!-- com.voya.test.LoginTest -->
     </classes>

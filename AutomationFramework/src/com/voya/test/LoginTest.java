@@ -13,6 +13,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.voya.pages.LoginPage;
+
+
+
+
+
 public class LoginTest {
 	private WebDriver driver;
 	
@@ -23,8 +29,7 @@ public class LoginTest {
 		
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		
 		driver.get("https://demo.openemr.io/b/openemr");
 	}
 	
@@ -38,21 +43,22 @@ public class LoginTest {
 	@Test
 	public void invalidCredentialTest()
 	{
-		driver.findElement(By.id("authUser")).sendKeys("admin123");
-		driver.findElement(By.id("clearPass")).sendKeys("pass");	
-		Select selectLanguage=new Select(driver.findElement(By.name("languageChoice")));
-		selectLanguage.selectByVisibleText("English (Indian)");
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
-		
-		String actualValue= driver.findElement(By.xpath("//div[contains(text(),'Invalid')]")).getText();
+		LoginPage.enterUsername(driver, "admin123");
+		LoginPage.enterPassword(driver, "pass");
+		LoginPage.selectLanguage(driver, "English (Indian)");
+		LoginPage.clickOnLogin(driver);
+				
+		String actualValue= LoginPage.getInvalidErrorMessage(driver);
+			
 		Assert.assertEquals(actualValue.trim(), "Invalid username or password");
 	}
 	
 	@Test
 	public void validCredentialTest()
 	{	
-		driver.findElement(By.id("authUser")).sendKeys("admin");
-		driver.findElement(By.id("clearPass")).sendKeys("pass");		
+		LoginPage.enterUsername(driver, "admin");
+		LoginPage.enterPassword(driver, "pass");		
+		
 		Select selectLanguage=new Select(driver.findElement(By.name("languageChoice")));
 		selectLanguage.selectByVisibleText("English (Indian)");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
