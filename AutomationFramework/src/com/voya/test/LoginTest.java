@@ -13,10 +13,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.voya.pages.DashboardPage;
 import com.voya.pages.LoginPage;
-
-
-
 
 
 public class LoginTest {
@@ -39,7 +37,6 @@ public class LoginTest {
 		driver.quit();
 	}
 	
-	
 	@Test
 	public void invalidCredentialTest()
 	{
@@ -58,12 +55,10 @@ public class LoginTest {
 	{	
 		LoginPage.enterUsername(driver, "admin");
 		LoginPage.enterPassword(driver, "pass");		
+		LoginPage.selectLanguage(driver, "English (Indian)");
+		LoginPage.clickOnLogin(driver);
 		
-		Select selectLanguage=new Select(driver.findElement(By.name("languageChoice")));
-		selectLanguage.selectByVisibleText("English (Indian)");
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
-		
-		String actualValue= driver.getTitle();
+		String actualValue= DashboardPage.getDashboardPageTitle(driver);
 		System.out.println(actualValue);		
 		Assert.assertEquals(actualValue,"OpenEMR");
 	}
@@ -71,17 +66,15 @@ public class LoginTest {
 	@Test
 	public void checkLoginPageTitleTest()
 	{
-		WebDriverWait wait=new WebDriverWait(driver, 50);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("authUser")));
-		
-		String actualTitle= driver.getTitle();
+		LoginPage.waitForPresenceOfUsernameElement(driver);		
+		String actualTitle= LoginPage.getLoginPageTitle(driver);
 		Assert.assertEquals(actualTitle, "OpenEMR Login");
 	}
 
 	@Test
 	public void checkApplicationDescTest()
 	{
-		String actualDesc=driver.findElement(By.xpath("//p[contains(text(),'most')]")).getText();
+		String actualDesc=LoginPage.getApplicationDescription(driver);
 		Assert.assertEquals(actualDesc.trim(), "The most popular open-source Electronic Health Record and Medical Practice Management solution.");
 	}
 }
