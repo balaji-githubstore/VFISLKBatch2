@@ -15,6 +15,9 @@ import org.testng.annotations.Test;
 
 import com.voya.pages.DashboardPage;
 import com.voya.pages.LoginPage;
+import com.voya.utilities.DataProviderUtils;
+
+
 
 
 public class LoginTest {
@@ -37,30 +40,30 @@ public class LoginTest {
 		driver.quit();
 	}
 	
-	@Test
-	public void invalidCredentialTest()
+	@Test(dataProviderClass = DataProviderUtils.class,dataProvider = "invalidCredentialData")
+	public void invalidCredentialTest(String username,String password,String language,String expectedValue)
 	{
-		LoginPage.enterUsername(driver, "admin123");
-		LoginPage.enterPassword(driver, "pass");
-		LoginPage.selectLanguage(driver, "English (Indian)");
+		LoginPage.enterUsername(driver, username);
+		LoginPage.enterPassword(driver, password);
+		LoginPage.selectLanguage(driver, language);
 		LoginPage.clickOnLogin(driver);
 				
 		String actualValue= LoginPage.getInvalidErrorMessage(driver);
 			
-		Assert.assertEquals(actualValue.trim(), "Invalid username or password");
+		Assert.assertEquals(actualValue.trim(), expectedValue);
 	}
 	
-	@Test
-	public void validCredentialTest()
+	@Test(dataProviderClass = DataProviderUtils.class,dataProvider = "validCredentialData")
+	public void validCredentialTest(String username,String password,String language,String expectedValue)
 	{	
-		LoginPage.enterUsername(driver, "admin");
-		LoginPage.enterPassword(driver, "pass");		
-		LoginPage.selectLanguage(driver, "English (Indian)");
+		LoginPage.enterUsername(driver, username);
+		LoginPage.enterPassword(driver, password);		
+		LoginPage.selectLanguage(driver, language);
 		LoginPage.clickOnLogin(driver);
 		
 		String actualValue= DashboardPage.getDashboardPageTitle(driver);
 		System.out.println(actualValue);		
-		Assert.assertEquals(actualValue,"OpenEMR");
+		Assert.assertEquals(actualValue,expectedValue);
 	}
 	
 	@Test

@@ -31,11 +31,9 @@ public class DemoTest {
 		main[2][2]="English (Indian)";
 		main[2][3]="OpenEMR";
 		
-		
 		return main;
 	}
-	
-	
+		
 	@Test(dataProvider = "validMethodData")
 	public void validMethodTest(String username,String password,String language,String expectedValue)
 	{
@@ -85,7 +83,7 @@ public class DemoTest {
 		return main;
 	}
 	
-	@Test(dataProvider = "validData")
+	//@Test(dataProvider = "validData")
 	public void validTest(String username,String password)
 	{
 		System.out.println("valid Test!!!"+username+password);
