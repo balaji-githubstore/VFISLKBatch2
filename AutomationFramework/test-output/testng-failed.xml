@@ -3,16 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.voya.test.LoginTest">
+      <class name="com.voya.test.DemoTest">
         <methods>
-          <include name="checkLoginPageTitleTest"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="checkApplicationDescTest"/>
-          <include name="invalidCredentialTest"/>
-          <include name="validCredentialTest"/>
+          <include name="validMethodTest"/>
         </methods>
-      </class> <!-- com.voya.test.LoginTest -->
+      </class> <!-- com.voya.test.DemoTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

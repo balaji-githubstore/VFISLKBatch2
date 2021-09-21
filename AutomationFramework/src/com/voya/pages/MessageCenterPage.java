@@ -6,7 +6,6 @@ import org.openqa.selenium.support.ui.Select;
 
 public class MessageCenterPage {
 	
-	
 	public static void switchToMsgFrame(WebDriver driver)
 	{
 		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@name='msg']")));

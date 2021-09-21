@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\JiDi\AppData\Local\Temp\testng-eclipse-1765440115\testng-customsuite.xml</span>
+                    <span>C:\Users\JiDi\AppData\Local\Temp\testng-eclipse-809002507\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +104,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.voya.test.MessagesTest" class="method navigator-link" hash-for-method="patientErrorMessageTest">patientErrorMessageTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.voya.test.DemoTest" class="method navigator-link" hash-for-method="validMethodTest(accountant, accountant, English (Indian), OpenEMR)">validMethodTest(accountant, accountant, English (Indian), OpenEMR)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.voya.test.DemoTest" class="method navigator-link" hash-for-method="validMethodTest(physician, physician, English (Indian), OpenEMR)">validMethodTest(physician, physician, English (Indian), OpenEMR)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.voya.test.DemoTest" class="method navigator-link" hash-for-method="validMethodTest(admin, pass, English (Indian), OpenEMR)">validMethodTest(admin, pass, English (Indian), OpenEMR)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -122,14 +132,31 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.voya.test.MessagesTest</span>
+              <span class="class-name">com.voya.test.DemoTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="patientErrorMessageTest">
-                  </a> <!-- patientErrorMessageTest -->
-                  <span class="method-name">patientErrorMessageTest</span>
+                  <a name="validMethodTest(accountant, accountant, English (Indian), OpenEMR)">
+                  </a> <!-- validMethodTest(accountant, accountant, English (Indian), OpenEMR) -->
+                  <span class="method-name">validMethodTest</span>
+                  <span class="parameters">(accountant, accountant, English (Indian), OpenEMR)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validMethodTest(physician, physician, English (Indian), OpenEMR)">
+                  </a> <!-- validMethodTest(physician, physician, English (Indian), OpenEMR) -->
+                  <span class="method-name">validMethodTest</span>
+                  <span class="parameters">(physician, physician, English (Indian), OpenEMR)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validMethodTest(admin, pass, English (Indian), OpenEMR)">
+                  </a> <!-- validMethodTest(admin, pass, English (Indian), OpenEMR) -->
+                  <span class="method-name">validMethodTest</span>
+                  <span class="parameters">(admin, pass, English (Indian), OpenEMR)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,7 +164,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\JiDi\AppData\Local\Temp\testng-eclipse-1765440115\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\JiDi\AppData\Local\Temp\testng-eclipse-809002507\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,11 +173,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.voya.test.MessagesTest&quot;&gt;
+      &lt;class name=&quot;com.voya.test.DemoTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;patientErrorMessageTest&quot;/&gt;
+          &lt;include name=&quot;validMethodTest&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.voya.test.MessagesTest --&gt;
+      &lt;/class&gt; &lt;!-- com.voya.test.DemoTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -190,11 +217,19 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'patientErrorMessageTest')
-data.setCell(0, 2, 'com.voya.test.MessagesTest')
-data.setCell(0, 3, 6605);
+data.setCell(0, 1, 'validMethodTest')
+data.setCell(0, 2, 'com.voya.test.DemoTest')
+data.setCell(0, 3, 4423);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'validMethodTest')
+data.setCell(1, 2, 'com.voya.test.DemoTest')
+data.setCell(1, 3, 1195);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'validMethodTest')
+data.setCell(2, 2, 'com.voya.test.DemoTest')
+data.setCell(2, 3, 1052);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -214,9 +249,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.voya.test.DemoTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">validTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -225,19 +267,19 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.voya.test.MessagesTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
+              <div class="chronological-class-name">com.voya.test.DemoTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">patientErrorMessageTest</span>
-                <span class="method-start">5775 ms</span>
+                <span class="method-name">validMethodTest(admin, pass, English (Indian), OpenEMR)</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">12382 ms</span>
-              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">validMethodTest(physician, physician, English (Indian), OpenEMR)</span>
+                <span class="method-start">4437 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validMethodTest(accountant, accountant, English (Indian), OpenEMR)</span>
+                <span class="method-start">5636 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
