@@ -1,0 +1,42 @@
+check for number of pages in the web application
+
+
+10 pages = 10 class 
+
+Page Object Class
+
+
+Class1 - LoginPage 
+	Methods - 
+		enterUsername()
+		enterPassword()
+		selectLanguage()
+		clickOnLogin()
+		getInvalidErrorMessage()
+		getCurrentTitle()
+		getApplicationDescription()
+		clickOnAckLicCert()
+		waitForPresenceOfUsername()
+
+Class2 - DashboardPage
+	Methods - 
+		getDashboardPageTitle()
+		clickOnCalendar()
+		clickOnFlowBoard()
+		clickOnRecallBoard()
+		clickOnMessages()
+		clickOnPatientClient()
+		clickOnPatients()
+		clickOnNewSearch()
+		all menu
+	
+Class3 - MessageCenterPage
+		switchToMsgFrame()
+		clickOnAddNew()
+		selectByType()
+		selectByStatus()
+		selectUser()
+		typeMessage()
+		clickOnSendMessage()
+		GetPatientErrorMessage()
+		switchOutOfFrame()
