@@ -32,4 +32,33 @@ public class ExcelUtils {
 		}	
 		return main;
 	}
+	//based on given row count
+	public static String[][] getSelectedRowIntoArray(String fileDetail,String sheetName) throws IOException  {
+		
+		FileInputStream file = new FileInputStream(fileDetail);
+		XSSFWorkbook book = new XSSFWorkbook(file);
+
+		XSSFSheet sheet = book.getSheet(sheetName);
+		
+		DataFormatter format = new DataFormatter();
+		
+		String rowAsStr=format.formatCellValue(sheet.getRow(0).getCell(1));	
+		int rowCount = Integer.parseInt(rowAsStr);
+		
+		
+
+//		int rowCount = sheet.getPhysicalNumberOfRows();
+		int cellCount = sheet.getRow(1).getPhysicalNumberOfCells();
+		String[][] main = new String[rowCount][cellCount];
+		int rowIndex=rowCount+2;
+		
+		for (int r = 2; r < rowIndex; r++) {
+			for (int c = 0; c < cellCount; c++) {
+				XSSFCell cell = sheet.getRow(r).getCell(c);
+				String value = format.formatCellValue(cell);
+				main[r - 2][c] = value;
+			}
+		}	
+		return main;
+	}
 }
