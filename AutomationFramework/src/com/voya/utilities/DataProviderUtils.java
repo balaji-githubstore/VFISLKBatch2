@@ -7,6 +7,14 @@ import org.testng.annotations.DataProvider;
 public class DataProviderUtils {
 	
 	@DataProvider
+	public String[][] patientErrorMessageData() throws IOException
+	{
+		String[][] main = ExcelUtils.getSheetIntoArray("testdata/OpenEmrTestData.xlsx", "patientErrorMessageTest");
+		return main;
+	}
+	
+	
+	@DataProvider
 	public String[][] invalidCredentialData() throws IOException
 	{
 		String[][] main = ExcelUtils.getSelectedRowIntoArray("testdata/OpenEmrTestData.xlsx", "invalidCredentialTestCount");
