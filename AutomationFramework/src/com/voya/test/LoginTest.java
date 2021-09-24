@@ -1,44 +1,16 @@
 package com.voya.test;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
+import com.voya.base.WebDriverWrapper;
 import com.voya.pages.DashboardPage;
 import com.voya.pages.LoginPage;
 import com.voya.utilities.DataProviderUtils;
 
-
-
-
-public class LoginTest {
-	private WebDriver driver;
 	
-	@BeforeMethod
-	public void setUp()
-	{
-		System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
-		
-		driver=new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		
-		driver.get("https://demo.openemr.io/b/openemr");
-	}
-	
-	@AfterMethod
-	public void tearDown()
-	{
-		driver.quit();
-	}
+public class LoginTest extends WebDriverWrapper  {
 	
 	@Test(dataProviderClass = DataProviderUtils.class,dataProvider = "invalidCredentialData")
 	public void invalidCredentialTest(String username,String password,String language,String expectedValue)
@@ -71,6 +43,9 @@ public class LoginTest {
 	{
 		LoginPage.waitForPresenceOfUsernameElement(driver);		
 		String actualTitle= LoginPage.getLoginPageTitle(driver);
+		
+		Reporter.log("actual title check");
+		
 		Assert.assertEquals(actualTitle, "OpenEMR Login");
 	}
 
