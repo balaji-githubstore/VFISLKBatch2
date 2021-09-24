@@ -8,15 +8,16 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 public class WebDriverWrapper {
 	
 	protected WebDriver driver;
 
 	@BeforeMethod
-	public void setUp() {
-		
-		String browser="ff";
+	@Parameters({"browser"})
+	public void setUp(@Optional("ch") String browser) {
 		
 		if(browser.equalsIgnoreCase("ff"))
 		{
@@ -33,7 +34,6 @@ public class WebDriverWrapper {
 			System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
 			driver = new ChromeDriver();
 		}
-		
 		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
