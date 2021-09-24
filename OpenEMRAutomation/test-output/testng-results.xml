@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-09-24T19:12:27 IST" name="Default suite" finished-at="2021-09-24T19:12:38 IST" duration-ms="10872">
+    <groups>
+    </groups>
+    <test started-at="2021-09-24T19:12:27 IST" name="Default test" finished-at="2021-09-24T19:12:38 IST" duration-ms="10872">
+      <class name="com.voya.test.AboutTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.voya.test.AboutTest@5d7148e2]" started-at="2021-09-24T19:12:27 IST" name="setUp" finished-at="2021-09-24T19:12:37 IST" duration-ms="9802" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ch]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="aboutHeaderAndVersionTest()[pri:0, instance:com.voya.test.AboutTest@5d7148e2]" started-at="2021-09-24T19:12:37 IST" name="aboutHeaderAndVersionTest" finished-at="2021-09-24T19:12:37 IST" duration-ms="109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aboutHeaderAndVersionTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.voya.test.AboutTest@5d7148e2]" started-at="2021-09-24T19:12:37 IST" name="tearDown" finished-at="2021-09-24T19:12:38 IST" duration-ms="893" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.voya.test.AboutTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
